@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CarHealth</string>
+    <string name="calculadora_flex">CALCULADORA FLEX</string>
+    <string name="resumo">RESUMO</string>
+    <string name="novo_abastecimento">NOVO ABASTECIMENTO</string>
+    <string name="carhealth">CarHealth</string>
+    <string name="calcular">Calcular</string>
+    <string name="pre_o_do_lcool">Preço do álcool:</string>
+    <string name="pre_o_da_gasolina">Preço da gasolina:</string>
+    <string name="calculadora">Calculadora</string>
 </resources>
