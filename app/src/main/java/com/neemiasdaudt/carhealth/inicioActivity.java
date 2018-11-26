@@ -31,6 +31,15 @@ public class inicioActivity extends Activity {
                 startActivity(calcActivity);
             }
         });
+
+        Button resumo = (Button) findViewById(R.id.btnResumo);
+        resumo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent resumoActivity = new Intent(inicioActivity.this, ResumoActivity.class);
+                startActivity(resumoActivity);
+            }
+        });
     }
 
 }
