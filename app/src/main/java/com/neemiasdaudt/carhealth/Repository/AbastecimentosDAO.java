@@ -23,16 +23,16 @@ public class AbastecimentosDAO {
     public long inserir(Abastecimentos abast){
         ContentValues values = new ContentValues();
         values.put("odometro", abast.getOdometro());
-        values.put("preço", abast.getPreco());
+        values.put("preco", abast.getPreco());
         values.put("total", abast.getTotal());
         values.put("litros", abast.getLitros());
-        values.put("observações", abast.getObserv());
+        values.put("observ", abast.getObserv());
         return banco.insert("abastecimentos", null, values);
     }
 
     public List<Abastecimentos> obterTodos(){
         List<Abastecimentos> abastecimentos = new ArrayList<>();
-        Cursor cursor = banco.query("abastecimentos",new String[]{"id","odometro","preco","total","litros"},
+        Cursor cursor = banco.query("abastecimentos",new String[]{"odometro","preco","total","litros","_id"},
                 null,null,null,null,null);
         while (cursor.moveToNext()){
             Abastecimentos ab = new Abastecimentos();

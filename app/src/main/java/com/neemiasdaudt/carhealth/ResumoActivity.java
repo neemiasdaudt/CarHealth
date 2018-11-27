@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ResumoActivity extends Activity {
 
-    private ListView listAbast;
+    private ListView listAbastecimentos;
     private AbastecimentosDAO dao;
     private List<Abastecimentos> abastecimentos;
 
@@ -22,10 +22,11 @@ public class ResumoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumo);
 
-        listAbast=findViewById(R.id.listAbast);
+
+        listAbastecimentos=findViewById(R.id.listAbast);
         dao = new AbastecimentosDAO(this);
         abastecimentos = dao.obterTodos();
         ArrayAdapter<Abastecimentos> adaptador = new ArrayAdapter<Abastecimentos>(this, android.R.layout.simple_list_item_1, abastecimentos);
-        listAbast.setAdapter(adaptador);
+        listAbastecimentos.setAdapter(adaptador);
     }
 }

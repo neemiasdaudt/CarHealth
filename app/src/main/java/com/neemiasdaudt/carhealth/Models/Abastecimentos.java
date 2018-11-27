@@ -60,8 +60,4 @@ public class Abastecimentos {
         this.observ = observ;
     }
 
-    @Override
-    public String toString(){
-        return odometro;
-    }
 }

@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 
 public class Conexao extends SQLiteOpenHelper {
 
-    private static final  String name = "car.db";
+    private static final  String name = "carHealth.db";
     private static final int version = 1;
 
     public Conexao(Context context) {
@@ -16,9 +16,9 @@ public class Conexao extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-            db.execSQL("create table abastecimentos(id integer primary key autoincrement," +
-                    "odometro varchar (15), preco varchar(10), total varchar(10)," +
-                    "litros varchar(10), observ varchar (300))");
+            db.execSQL("create table abastecimentos( id integer primary key autoincrement," +
+                    "odometro TEXT, preco TEXT, total TEXT," +
+                    "litros TEXT, observ TEXT);");
     }
 
     @Override

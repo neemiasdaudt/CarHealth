@@ -45,8 +45,8 @@ public class CadAbastecimentoActivity extends Activity {
         ab.setTotal(total.getText().toString());
         ab.setLitros(litros.getText().toString());
         ab.setObserv(observ.getText().toString());
-        dao.inserir(ab);
-        Toast.makeText(this,"Abastecimento gravado!", Toast.LENGTH_SHORT).show();
+        long id = dao.inserir(ab);
+        Toast.makeText(this,"Abastecimento gravado!" + id, Toast.LENGTH_SHORT).show();
 
     }
 }
